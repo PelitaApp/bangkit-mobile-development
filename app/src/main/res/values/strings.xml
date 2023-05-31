@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Pelita Apps</string>
+    <string name="welcome_back">Welcome Back</string>
+    <string name="login_account">Login to your Account</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="btnLoginn">L O G I N</string>
+    <string name="donthvA">"Dont have Account? Sign Up "</string>
+    <string name="regis_account">Register Account</string>
+</resources>
