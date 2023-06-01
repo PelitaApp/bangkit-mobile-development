@@ -7,4 +7,31 @@
     <string name="btnLoginn">L O G I N</string>
     <string name="donthvA">"Dont have Account? Sign Up "</string>
     <string name="regis_account">Register Account</string>
+    <string name="checked"><![CDATA[by signing up you agree to our terms & CONDITIONS of use and privacy policy.]]></string>
+    <string name="btnRegister">"R E G I S T E R "</string>
+    <string name="username">Username</string>
+    <string name="pelita">P E L I T A</string>
+    <string name="manageyw">Manage Your Waste</string>
+    <string name="title_activity_nav_drawer">NavDrawerActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+
+    <string name="nav_username"> Aditya Rizkiawan Nugraha </string>
+    <string name="nav_email"> adityarizkiawann@gmail.com </string>
+    <string name="username_profile">Aditya Rizkiawan N</string>
+    <string name="edit_profile">Edit Profile</string>
+    <string name="btnBahasa">Bahasa</string>
+    <string name="btnAbout">Tentang</string>
+    <string name="btnReview">Ulasan</string>
+    <string name="btnLogout">Keluar</string>
+    <string name="btnSimpan">S I M P A N</string>
+
 </resources>
