@@ -12,6 +12,8 @@
     <string name="username">Username</string>
     <string name="pelita">P E L I T A</string>
     <string name="manageyw">Manage Your Waste</string>
+
+    <!--    Digunakan untuk Nav Drawer -->
     <string name="title_activity_nav_drawer">NavDrawerActivity</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
@@ -24,6 +26,10 @@
     <string name="menu_gallery">Gallery</string>
     <string name="menu_slideshow">Slideshow</string>
 
+    <string name="aditya_rizkiawan">Aditya Rizkiawan</string>
+    <string name="aditya_rizkiawacom">adityarizkiawann@gmail.com</string>
+
+    <!--    Digunakan untuk Profil -->
     <string name="nav_username"> Aditya Rizkiawan Nugraha </string>
     <string name="nav_email"> adityarizkiawann@gmail.com </string>
     <string name="username_profile">Aditya Rizkiawan N</string>
@@ -33,5 +39,6 @@
     <string name="btnReview">Ulasan</string>
     <string name="btnLogout">Keluar</string>
     <string name="btnSimpan">S I M P A N</string>
+    <string name="payment_success">Berhasil !! Pencairan akan dilakukan dalam 1X24 Jam</string>
 
 </resources>
