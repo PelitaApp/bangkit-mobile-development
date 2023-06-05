@@ -9,7 +9,7 @@ import com.dicoding.pelitaapps.R
 
 class LandingPageActivity : AppCompatActivity() {
 
-    private val splash: Long = 4000
+    private val splash: Long = 1000
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

@@ -56,4 +56,12 @@ class MainRepository private constructor(
         val settingPreference = SettingPreference(context)
         return settingPreference.setUser(token)
     }
+
+    companion object {
+        @Volatile
+        private var instance: MainRepository? = null
+        fun getInstance(apiService: ApiService): MainRepository = instance ?: synchronized(this) {
+            instance ?: MainRepository(apiService)
+        }.also { instance = it }
+    }
 }

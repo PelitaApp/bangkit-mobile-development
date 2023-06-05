@@ -29,20 +29,22 @@ class LoginActivity : AppCompatActivity() {
         binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+
         val tv_register = binding.tvRegister
         val btnLogin = binding.btnLogin
         val edEmail = binding.etEditTextEmail
         val edPassword = binding.etEditTextPassword
 
-        // Digunakan untuk mengecek login
+        // Cek Login
         isLoginBefore(this)
 
-        // Digunakan untuk masuk halaman register
+        //Masuk ke halaman register
         tv_register.setOnClickListener {
             val register = Intent(this@LoginActivity, RegisterActivity::class.java)
             startActivity(register)
             finish()
         }
+
 
         if (Build.VERSION.SDK_INT >= 33) {
             val data = intent.getParcelableExtra("extra_email_username", LoginUser::class.java)
@@ -59,13 +61,12 @@ class LoginActivity : AppCompatActivity() {
 
         btnLogin.setOnClickListener {
             if (edPassword.text?.isEmpty() == true) {
-                edPassword.error = "Mohon untuk di Isi, Tidak boleh kosong !!"
+                edPassword.error = "Mohon Untuk Di isi, Tidak Boleh Kosong"
             }
 
             if (edEmail.text?.isEmpty() == true) {
-                edEmail.error = "Mohon isi dengan format @gmail"
+                edEmail.error = "Mohon isi dengan Format @gmail dan Tidak boleh kosong"
             }
-
             if (edPassword.error == null && edEmail.error == null) {
                 userLogin(edEmail.text.toString(), edPassword.text.toString())
             }
@@ -74,7 +75,7 @@ class LoginActivity : AppCompatActivity() {
 
     private fun isLoginBefore(context: Context) {
         mainViewModel.getPreference(context).observe(this) { token ->
-            if (token?.isEmpty() == false ) {
+            if (token?.isEmpty() == false) {
                 val mainActivity = Intent(this@LoginActivity, MainActivity::class.java)
                 startActivity(mainActivity)
                 finish()
@@ -89,7 +90,7 @@ class LoginActivity : AppCompatActivity() {
                     is Result.Loading -> {
                         loadingProcess()
                     }
-                    is Result.Success<*> -> {
+                    is Result.Success -> {
                         binding.progressBar.visibility = View.GONE
                         val data = result.data
                         Toast.makeText(this@LoginActivity, data.message, Toast.LENGTH_SHORT).show()

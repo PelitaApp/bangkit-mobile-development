@@ -3,9 +3,11 @@ package com.dicoding.pelitaapps.viewmodel
 import android.content.Context
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
+import com.dicoding.pelitaapps.remotedata.MainRepository
+import com.dicoding.pelitaapps.retrofit.ApiRetro
 
 class ViewModelFactory private constructor(private val mainRepository: MainRepository) :
-    ViewModelProvider.NewInstanceFactory {
+    ViewModelProvider.NewInstanceFactory() {
 
     @Suppress("UNCHECKED_CAST")
     override fun <T : ViewModel> create(modelClass: Class<T>): T {
@@ -19,8 +21,7 @@ class ViewModelFactory private constructor(private val mainRepository: MainRepos
         @Volatile
         private var instance: ViewModelFactory? = null
         fun getInstance(context: Context): ViewModelFactory = instance ?: synchronized(this) {
-            instance ? :ViewModelFactory(ApiRetro.provideRepository(context))
+            instance ?: ViewModelFactory(ApiRetro.provideRepository(context))
         }.also { instance = it }
-
     }
 }

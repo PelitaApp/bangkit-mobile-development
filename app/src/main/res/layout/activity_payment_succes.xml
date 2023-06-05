@@ -26,10 +26,21 @@
         android:layout_marginStart="50dp"
         android:layout_marginTop="415dp"
         android:layout_marginEnd="50dp"
-        android:textAlignment="center"
-        android:text="@string/payment_success"/>
+        android:text="@string/payment_success"
+        android:textAlignment="center" />
 
-    B
-
+    <Button
+        android:id="@+id/btnKembali"
+        android:layout_width="285dp"
+        android:layout_height="68dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="55dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="540dp"
+        android:gravity="top|center_horizontal"
+        android:text="@string/kembali"
+        android:textAppearance="@style/kembali" />
 
 </RelativeLayout>

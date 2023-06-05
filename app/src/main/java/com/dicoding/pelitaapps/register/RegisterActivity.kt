@@ -27,15 +27,18 @@ class RegisterActivity : AppCompatActivity() {
         binding = ActivityRegisterBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        //Get value from edit text
         val nameVal = binding.edRegisterName.text
         val emailVal = binding.etEditTextEmail.text
         val passwordVal = binding.etEditTextPassword.text
 
         binding.btnRegis.setOnClickListener {
-            val edRegisPasswordError = binding.etEditTextPassword.text
-
-            if (edRegisPasswordError?.length!! < 8) {
-                binding.btnRegis.error = "Password yang anda inputkan harus lebih dari 8 Karakter"
+            val edRegisterPasswordError = binding.etEditTextPassword.text
+            // Digunakan
+            // Jika Password yang dimasukan kurang dari 8 maka Button Register akan error
+            if (edRegisterPasswordError?.length!! < 8) {
+                binding.btnRegis.error =
+                    "Password yang anda inputkan harus lebih dari 8 Karakter"
             } else {
                 loadingProcess()
                 mainViewModel.registerNewUser(
@@ -45,7 +48,7 @@ class RegisterActivity : AppCompatActivity() {
                 ).observe(this) { result ->
                     when (result) {
                         is Result.Loading -> {}
-                        is Result.Success<*> -> {
+                        is Result.Success -> {
                             binding.progressBar.visibility = View.GONE
                             val response = result.data
                             Toast.makeText(this, response.message, Toast.LENGTH_SHORT).show()
@@ -68,7 +71,23 @@ class RegisterActivity : AppCompatActivity() {
         }
     }
 
+    @Deprecated("Deprecated in Java")
+    override fun onBackPressed() {
+        // Do something before going back to the previous activity
+        startActivity(Intent(this, LoginActivity::class.java))
+        finish()
+    }
+
+
+    private fun loadingProcess() {
+        binding.progressBar.visibility = View.VISIBLE
+        binding.edRegisterName.isCursorVisible = false
+        binding.etEditTextEmail.isCursorVisible = false
+        binding.etEditTextPassword.isCursorVisible = false
+    }
+
     private fun wrongDataGiven() {
+        binding.progressBar.visibility = View.GONE
         binding.edRegisterName.isCursorVisible = true
         binding.etEditTextEmail.isCursorVisible = true
         binding.etEditTextPassword.isCursorVisible = true
@@ -79,11 +98,5 @@ class RegisterActivity : AppCompatActivity() {
         intent.putExtra("extra_email_username", data)
         startActivity(intent)
         finish()
-    }
-
-    private fun loadingProcess() {
-        binding.edRegisterName.isCursorVisible = false
-        binding.etEditTextEmail.isCursorVisible = false
-        binding.etEditTextPassword.isCursorVisible = false
     }
 }

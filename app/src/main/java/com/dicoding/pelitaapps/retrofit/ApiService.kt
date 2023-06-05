@@ -11,13 +11,11 @@ import retrofit2.http.POST
 
 interface ApiService {
 
-    @FormUrlEncoded
     @POST("register")
     suspend fun register(
         @Body requestBody: RegisterUser
     ) : RegisterResponse
 
-    @FormUrlEncoded
     @POST("login")
     suspend fun login (
         @Body requestBody: LoginUser

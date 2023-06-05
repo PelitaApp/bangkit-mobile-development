@@ -40,5 +40,12 @@
     <string name="btnLogout">Keluar</string>
     <string name="btnSimpan">S I M P A N</string>
     <string name="payment_success">Berhasil !! Pencairan akan dilakukan dalam 1X24 Jam</string>
+    <string name="kembali">Kembali ke Halaman Utama</string>
+    <string name="SelangkahLagi">Selangkah Lagi</string>
+    <string name="btnKonfirmasi">K O N F I R M A S I</string>
+    <string name="tvBack">Engga Jadi ??</string>
+
+    <string name="register">Dont Have An Account </string>
+    <string name="tv_click">Click Here</string>
 
 </resources>

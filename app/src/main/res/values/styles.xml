@@ -41,5 +41,20 @@
         <item name="android:textColor">#000000</item>
     </style>
 
+    <style name="kembali">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
+
+    <style name="SelangkahLagi">
+        <item name="android:textSize">30sp</item>
+        <item name="android:textColor">#000000</item>
+    </style>
+
+    <style name="tvBack">
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">#AFAFAF</item>
+    </style>
+
 
 </resources>
