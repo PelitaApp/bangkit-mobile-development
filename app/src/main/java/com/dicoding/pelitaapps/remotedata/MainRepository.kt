@@ -23,7 +23,7 @@ class MainRepository private constructor(
         password: String
     ): Result<RegisterResponse> {
         return try {
-            val response = apiService.register(RegisterUser(username, email, password))
+            val response = apiService.register(username, email, password)
             Result.Success(response)
         } catch (e: HttpException) {
             val error = e.response()?.errorBody()?.string()
@@ -40,7 +40,7 @@ class MainRepository private constructor(
     fun loginUser(email: String, password: String): LiveData<Result<LoginResponse>> = liveData {
         emit(Result.Loading)
         try {
-            val response = apiService.login(LoginUser(email, password))
+            val response = apiService.login(email, password)
             emit(Result.Success(response))
         } catch (e: Exception) {
             emit(Result.Error(e.message.toString()))

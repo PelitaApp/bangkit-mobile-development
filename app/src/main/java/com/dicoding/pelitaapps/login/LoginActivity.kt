@@ -12,6 +12,8 @@ import com.dicoding.pelitaapps.MainActivity
 import com.dicoding.pelitaapps.data.LoginUser
 import com.dicoding.pelitaapps.remotedata.Result
 import com.dicoding.pelitaapps.databinding.ActivityLoginBinding
+import com.dicoding.pelitaapps.home.HomePageActivity
+import com.dicoding.pelitaapps.nav.BottomNavigationActivity
 import com.dicoding.pelitaapps.register.RegisterActivity
 import com.dicoding.pelitaapps.viewmodel.MainViewModel
 import com.dicoding.pelitaapps.viewmodel.ViewModelFactory
@@ -94,8 +96,8 @@ class LoginActivity : AppCompatActivity() {
                         binding.progressBar.visibility = View.GONE
                         val data = result.data
                         Toast.makeText(this@LoginActivity, data.message, Toast.LENGTH_SHORT).show()
-                        if (data.loginResult?.token != null) {
-                            mainViewModel.setPreference(data.loginResult.token, this)
+                        if (data.token != null) {
+                            mainViewModel.setPreference(data.token, this)
                         }
                         val mainActivity = Intent(this@LoginActivity, MainActivity::class.java)
                         startActivity(mainActivity)
@@ -104,6 +106,7 @@ class LoginActivity : AppCompatActivity() {
                     is Result.Error -> {
                         binding.progressBar.visibility = View.GONE
                         Toast.makeText(this, result.error, Toast.LENGTH_SHORT).show()
+                        Toast.makeText(this, "Username atau Password Tidak Sesuai !!", Toast.LENGTH_SHORT).show()
                     }
                 }
             }
