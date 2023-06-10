@@ -49,7 +49,7 @@ class SellActivity : AppCompatActivity() {
             exactLocLon = result.data?.getStringExtra(PickLocationPointActivity.EXTRA_EXACT_LOC_LON)
             binding.tvAlamat.text = getString(R.string.address,namedLoc)
             Glide.with(this@SellActivity)
-                .load("https://maps.googleapis.com/maps/api/staticmap?size=300x150&maptype=roadmap\\&zoom=15&markers=size:mid%7Ccolor:red%7C$exactLocLat,$exactLocLon&key=AIzaSyAMTCwZ8aJGfIqebRlqSPgyV4Mf2ZbV2LM")
+                .load("https://maps.googleapis.com/maps/api/staticmap?size=300x150&maptype=roadmap\\&zoom=15&markers=size:mid%7Ccolor:red%7C$exactLocLat,$exactLocLon&key="+getString(R.string.google_maps_api_key))
                 .into(binding.ivMap)
             binding.klikDisini.visibility = View.INVISIBLE
         } else if(result.data == null){
