@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="true">
+        <layer-list>
+            <item>
+                <shape>
+                    <solid android:color="@color/black" />
+                </shape>
+            </item>
+            <item android:drawable="@drawable/ic_back_arrow_white" /> <!-- Replace with your back button icon -->
+        </layer-list>
+    </item>
+    <item android:drawable="@drawable/ic_back_arrow" /> <!-- Replace with your back button icon -->
+</selector>

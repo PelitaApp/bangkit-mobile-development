@@ -8,7 +8,6 @@ import android.widget.Toast
 import androidx.activity.viewModels
 import com.dicoding.pelitaapps.data.LoginUser
 import com.dicoding.pelitaapps.databinding.ActivityRegisterBinding
-import com.dicoding.pelitaapps.home.HomePageActivity
 import com.dicoding.pelitaapps.login.LoginActivity
 import com.dicoding.pelitaapps.viewmodel.MainViewModel
 import com.dicoding.pelitaapps.viewmodel.ViewModelFactory

@@ -12,26 +12,10 @@
     <string name="username">Username</string>
     <string name="pelita">P E L I T A</string>
     <string name="manageyw">Manage Your Waste</string>
-
-    <!--    Digunakan untuk Nav Drawer -->
-    <string name="title_activity_nav_drawer">NavDrawerActivity</string>
-    <string name="navigation_drawer_open">Open navigation drawer</string>
-    <string name="navigation_drawer_close">Close navigation drawer</string>
-    <string name="nav_header_title">Android Studio</string>
-    <string name="nav_header_subtitle">android.studio@android.com</string>
-    <string name="nav_header_desc">Navigation header</string>
-    <string name="action_settings">Settings</string>
-
-    <string name="menu_home">Home</string>
-    <string name="menu_gallery">Gallery</string>
-    <string name="menu_slideshow">Slideshow</string>
-
-    <string name="aditya_rizkiawan">Aditya Rizkiawan</string>
-    <string name="aditya_rizkiawacom">adityarizkiawann@gmail.com</string>
+    <string name="register">Dont Have An Account </string>
+    <string name="tv_click">Click Here</string>
 
     <!--    Digunakan untuk Profil -->
-    <string name="nav_username"> Aditya Rizkiawan Nugraha </string>
-    <string name="nav_email"> adityarizkiawann@gmail.com </string>
     <string name="username_profile">Aditya Rizkiawan N</string>
     <string name="edit_profile">Edit Profile</string>
     <string name="btnBahasa">Bahasa</string>
@@ -45,23 +29,48 @@
     <string name="btnKonfirmasi">K O N F I R M A S I</string>
     <string name="tvBack">Engga Jadi ??</string>
 
-    <string name="register">Dont Have An Account </string>
-    <string name="tv_click">Click Here</string>
-    <string name="sampah_terjual">Sampah Terjual</string>
-    <string name="kg">10 Kg</string>
-    <string name="dashboard">DASHBOARD</string>
-    <string name="string_judul1">Mr.Beast and 200 Milion Trees !!</string>
-    <string name="ayo_jaga_lingkungan">Ayo Jaga Lingkungan</string>
-    <string name="profile">Profile</string>
-    <string name="title_activity_bottom_navigation">BottomNavigationActivity</string>
-    <string name="title_home">Home</string>
-    <string name="title_dashboard">Dashboard</string>
-    <string name="title_notifications">Notifications</string>
-    <string name="title_camera">Camera</string>
-    <string name="title_pickup">Pick Up</string>
-    <string name="dashboardhome">DASHBOARD HOME</string>
-    <string name="string_judul2">Gerakan 3R untuk Bumi yang lebih baik !!</string>
-    <string name="totalpoints">Total Points</string>
-    <string name="points">100 Pts</string>
+    <string name="back">back</string>
+    <string name="user">user</string>
+    <string name="photo">photo</string>
+    <string name="take_picture">Take Picture</string>
+    <string name="trash_type">Trash type</string>
+    <string name="trash_weight">Trash weight</string>
+    <string name="pick_up_loc">Pick up location</string>
+    <string name="note">Note</string>
+    <string name="next">Next</string>
+    <string name="maps_picker">Maps picker</string>
+    <string name="map_hint">Move the pointer to desirable place</string>
+    <string name="loc_now">Current location</string>
+    <string name="address">Address : %1$s</string>
+    <string name="clich_here">Click to pick the location</string>
+    <string name="in_kg">(in kg)</string>
+    <string name="weight_limit">Allowed weight is only 2–10 kg</string>
+    <string name="empty_address">Pickup point is not allowed to be empty</string>
+    <string name="result">Result</string>
+    <string name="back_home">Back to home</string>
+    <string name="success_message">Success !\nDriver is on the way to your location</string>
+    <string name="failed_message">Failed !\nWe cannot proccess your request</string>
+    <string name="no_empty">Not allowed to be empty</string>
+    <string name="dashboard">Dashboard</string>
+    <string name="total_point">Total Point</string>
+    <string name="count_pts">xxxxxpts</string>
+    <string name="lets_care_environment">Let\'s take care our environment</string>
+    <string name="otw_eta">ETA : %1$s</string>
+    <string name="sold_trash">Sold trash</string>
+    <string name="count_kg">xxxxkg</string>
+    <string name="claim_gift">Claim gift</string>
+    <string name="count_gift_percent">xxxx %</string>
+    <string name="article_title">Article titlea aaaaaaaaaaaa aaaaaaaaaaaa aaaaaaaaaaaa aaaaaaaaaaaa aaaaaaaaaaaa</string>
+    <string name="article_description">Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum</string>
+    <string name="article_url_src">Source : %1$s</string>
+    <string-array name="jenis_sampah">
+        <item>Iron</item>
+        <item>Glass</item>
+        <item>Cardboard</item>
+        <item>Rubber</item>
+        <item>Papers</item>
+        <item>Household organic waste</item>
+        <item>Plastic</item>
+    </string-array>
 
 </resources>

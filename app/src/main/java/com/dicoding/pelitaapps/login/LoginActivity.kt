@@ -9,11 +9,10 @@ import android.view.View
 import android.widget.Toast
 import androidx.activity.viewModels
 import com.dicoding.pelitaapps.MainActivity
+import com.dicoding.pelitaapps.dashboard.DashboardActivity
 import com.dicoding.pelitaapps.data.LoginUser
 import com.dicoding.pelitaapps.remotedata.Result
 import com.dicoding.pelitaapps.databinding.ActivityLoginBinding
-import com.dicoding.pelitaapps.home.HomePageActivity
-import com.dicoding.pelitaapps.nav.BottomNavigationActivity
 import com.dicoding.pelitaapps.register.RegisterActivity
 import com.dicoding.pelitaapps.viewmodel.MainViewModel
 import com.dicoding.pelitaapps.viewmodel.ViewModelFactory
@@ -78,7 +77,7 @@ class LoginActivity : AppCompatActivity() {
     private fun isLoginBefore(context: Context) {
         mainViewModel.getPreference(context).observe(this) { token ->
             if (token?.isEmpty() == false) {
-                val mainActivity = Intent(this@LoginActivity, MainActivity::class.java)
+                val mainActivity = Intent(this@LoginActivity, DashboardActivity::class.java)
                 startActivity(mainActivity)
                 finish()
             }
@@ -99,7 +98,7 @@ class LoginActivity : AppCompatActivity() {
                         if (data.token != null) {
                             mainViewModel.setPreference(data.token, this)
                         }
-                        val mainActivity = Intent(this@LoginActivity, MainActivity::class.java)
+                        val mainActivity = Intent(this@LoginActivity, DashboardActivity::class.java)
                         startActivity(mainActivity)
                         finish()
                     }

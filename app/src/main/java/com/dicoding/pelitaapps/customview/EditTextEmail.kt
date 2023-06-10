@@ -1,10 +1,12 @@
 package com.dicoding.pelitaapps.customview
 
 import android.content.Context
+import android.graphics.Canvas
 import android.text.Editable
 import android.text.TextWatcher
 import android.util.AttributeSet
 import android.util.Patterns
+import android.view.View
 import androidx.appcompat.widget.AppCompatEditText
 
 class EditTextEmail : AppCompatEditText {
@@ -15,6 +17,16 @@ class EditTextEmail : AppCompatEditText {
         attrs,
         defStyleAttr
     )
+
+    override fun onDraw(canvas: Canvas) {
+        super.onDraw(canvas)
+        //Menambahkan Hint
+        hint = "Username"
+
+        // Menambahkan text aligmnet pada editText
+        textAlignment = View.TEXT_ALIGNMENT_VIEW_START
+
+    }
 
     init {
         addTextChangedListener(object : TextWatcher {
