@@ -1,0 +1,76 @@
+<resources>
+    <string name="app_name">Pelita Apps</string>
+    <string name="welcome_back">Selamat datang</string>
+    <string name="login_account">Masuk ke akunmu</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="btnLoginn">M A S U K</string>
+    <string name="donthvA">Tidak punya akun? Daftar</string>
+    <string name="regis_account">Daftar akun</string>
+    <string name="checked"><![CDATA[by signing up you agree to our terms & CONDITIONS of use and privacy policy.]]></string>
+    <string name="btnRegister">D A F T A R</string>
+    <string name="username">Username</string>
+    <string name="pelita">P E L I T A</string>
+    <string name="manageyw">Kelola sampahmu</string>
+    <string name="register">Tidak punya akun</string>
+    <string name="tv_click">Klik disini</string>
+
+    <!--    Digunakan untuk Profil -->
+    <string name="username_profile">Aditya Rizkiawan N</string>
+    <string name="edit_profile">Ubah profil</string>
+    <string name="btnBahasa">Bahasa</string>
+    <string name="btnAbout">Tentang</string>
+    <string name="btnReview">Ulasan</string>
+    <string name="btnLogout">Keluar</string>
+    <string name="btnSimpan">S I M P A N</string>
+    <string name="payment_success">Berhasil !! Pencairan akan dilakukan dalam 1X24 Jam</string>
+    <string name="kembali">Kembali ke Halaman Utama</string>
+    <string name="SelangkahLagi">Selangkah Lagi</string>
+    <string name="btnKonfirmasi">K O N F I R M A S I</string>
+    <string name="tvBack">Engga Jadi ??</string>
+
+    <string name="back">Kembali</string>
+    <string name="user">Pengguna</string>
+    <string name="photo">Foto</string>
+    <string name="take_picture">Ambil gambar</string>
+    <string name="trash_type">Jenis sampah</string>
+    <string name="trash_weight">Berat sampah</string>
+    <string name="pick_up_loc">Lokasi jemput</string>
+    <string name="note">Catatan</string>
+    <string name="next">Selanjutnya</string>
+    <string name="maps_picker">Pemilih lokasi</string>
+    <string name="map_hint">Gerakkan penunjuk ke arah yang diinginkan</string>
+    <string name="loc_now">Lokasi saat ini</string>
+    <string name="address">Alamat : %1$s</string>
+    <string name="clich_here">Klik untuk memilih lokasi</string>
+    <string name="in_kg">(dalam kg)</string>
+    <string name="weight_limit">Berat yang diperbolehkan 2 – 10 kg</string>
+    <string name="empty_address">Titik jemput tidak boleh kosong</string>
+    <string name="result">Hasil</string>
+    <string name="back_home">Kembali ke halaman utama</string>
+    <string name="success_message">Berhasil !\nPetugas sedang menuju lokasi</string>
+    <string name="failed_message">Gagal !\nKami tidak bisa memproses permintaan anda</string>
+    <string name="no_empty">Tidak boleh kosong</string>
+    <string name="dashboard">Dashboard</string>
+    <string name="total_point">Total poin</string>
+    <string name="count_pts">xxxxxpts</string>
+    <string name="lets_care_environment">Ayo jaga lingkungan</string>
+    <string name="otw_eta">ETA : %1$s</string>
+    <string name="sold_trash">Sampah terjual</string>
+    <string name="count_kg">xxxxkg</string>
+    <string name="claim_gift">Klaim hadiah</string>
+    <string name="count_gift_percent">xxxx %</string>
+    <string name="article_title">Article titlea aaaaaaaaaaaa aaaaaaaaaaaa aaaaaaaaaaaa aaaaaaaaaaaa aaaaaaaaaaaa</string>
+    <string name="article_description">Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum</string>
+    <string name="article_url_src">Sumber : %1$s</string>
+    <string-array name="jenis_sampah">
+        <item>Iron</item>
+        <item>Glass</item>
+        <item>Cardboard</item>
+        <item>Rubber</item>
+        <item>Papers</item>
+        <item>Household organic waste</item>
+        <item>Plastic</item>
+    </string-array>
+
+</resources>

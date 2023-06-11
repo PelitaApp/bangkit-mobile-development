@@ -21,4 +21,13 @@ internal class SettingPreference
         val getToken = preferences.getString(TOKEN, "")
         return getToken
     }
+
+    fun getPrefData(index: String): String?{
+        return preferences.getString(index, "")
+    }
+    fun setPrefData(index: String, value: String){
+        val editor = preferences.edit()
+        editor.putString(index, value)
+        editor.apply()
+    }
 }

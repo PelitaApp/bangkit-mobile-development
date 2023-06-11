@@ -18,20 +18,20 @@
     <!--    Digunakan untuk Profil -->
     <string name="username_profile">Aditya Rizkiawan N</string>
     <string name="edit_profile">Edit Profile</string>
-    <string name="btnBahasa">Bahasa</string>
-    <string name="btnAbout">Tentang</string>
-    <string name="btnReview">Ulasan</string>
-    <string name="btnLogout">Keluar</string>
-    <string name="btnSimpan">S I M P A N</string>
-    <string name="payment_success">Berhasil !! Pencairan akan dilakukan dalam 1X24 Jam</string>
-    <string name="kembali">Kembali ke Halaman Utama</string>
-    <string name="SelangkahLagi">Selangkah Lagi</string>
-    <string name="btnKonfirmasi">K O N F I R M A S I</string>
-    <string name="tvBack">Engga Jadi ??</string>
+    <string name="btnBahasa">Language</string>
+    <string name="btnAbout">About</string>
+    <string name="btnReview">Review</string>
+    <string name="btnLogout">Logout</string>
+    <string name="btnSimpan">S A V E</string>
+    <string name="payment_success">Success ! The payment will done in 1x24</string>
+    <string name="kembali">Back to the main page</string>
+    <string name="SelangkahLagi">One step close</string>
+    <string name="btnKonfirmasi">C O N F I R M</string>
+    <string name="tvBack">Cancel ?</string>
 
-    <string name="back">back</string>
-    <string name="user">user</string>
-    <string name="photo">photo</string>
+    <string name="back">Back</string>
+    <string name="user">User</string>
+    <string name="photo">Photo</string>
     <string name="take_picture">Take Picture</string>
     <string name="trash_type">Trash type</string>
     <string name="trash_weight">Trash weight</string>
@@ -63,6 +63,9 @@
     <string name="article_title">Article titlea aaaaaaaaaaaa aaaaaaaaaaaa aaaaaaaaaaaa aaaaaaaaaaaa aaaaaaaaaaaa</string>
     <string name="article_description">Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum</string>
     <string name="article_url_src">Source : %1$s</string>
+    <string name="change_your_language">Change your language</string>
+    <string name="indonesia">Indonesia</string>
+    <string name="english">English</string>
     <string-array name="jenis_sampah">
         <item>Iron</item>
         <item>Glass</item>

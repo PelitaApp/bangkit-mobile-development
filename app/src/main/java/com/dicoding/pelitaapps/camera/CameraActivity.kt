@@ -66,6 +66,9 @@ class CameraActivity : AppCompatActivity() {
                 launcherIntentCamera.launch(intent)
             }
         }
+        binding.back.setOnClickListener{
+            finish()
+        }
         binding.btnRetake.setOnClickListener{
             val moveIntent = Intent(this@CameraActivity, CameraActivity::class.java)
             finish()
