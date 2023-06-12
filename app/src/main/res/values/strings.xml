@@ -12,7 +12,7 @@
     <string name="username">Username</string>
     <string name="pelita">P E L I T A</string>
     <string name="manageyw">Manage Your Waste</string>
-    <string name="register">Dont Have An Account </string>
+    <string name="register">Dont Have An Account ? </string>
     <string name="tv_click">Click Here</string>
 
     <!--    Digunakan untuk Profil -->
@@ -66,6 +66,13 @@
     <string name="change_your_language">Change your language</string>
     <string name="indonesia">Indonesia</string>
     <string name="english">English</string>
+    <string name="google_maps_api_key">AIzaSyBfX890j-CKjcoUe4v34GSVTPVKtyPX8DA</string>
+    <string name="change_your_picture">Change Your Picture</string>
+    <string name="nomor">Phone Number</string>
+    <string name="phone">Phone Number</string>
+    <string name="name">Name</string>
+    <string name="Name">Name</string>
+    <string name="edit_account">Edit Akun</string>
     <string-array name="jenis_sampah">
         <item>Iron</item>
         <item>Glass</item>

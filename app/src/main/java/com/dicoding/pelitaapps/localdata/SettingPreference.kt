@@ -30,4 +30,12 @@ internal class SettingPreference
         editor.putString(index, value)
         editor.apply()
     }
+
+    fun removeData() {
+        val editor = preferences.edit()
+        editor.clear()
+        editor.apply()
+    }
+
+
 }
