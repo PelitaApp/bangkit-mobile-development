@@ -43,7 +43,7 @@ class LanguageActivity : AppCompatActivity() {
             setLanguage("en_US")
         }
         binding.btnIn.setOnClickListener{
-            setLanguage("id")
+            setLanguage("in")
         }
     }
 }

@@ -53,7 +53,7 @@
     <string name="no_empty">Not allowed to be empty</string>
     <string name="dashboard">Dashboard</string>
     <string name="total_point">Total Point</string>
-    <string name="count_pts">xxxxxpts</string>
+    <string name="count_pts">%1$spts</string>
     <string name="lets_care_environment">Let\'s take care our environment</string>
     <string name="otw_eta">ETA : %1$s</string>
     <string name="sold_trash">Sold trash</string>

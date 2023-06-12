@@ -53,7 +53,7 @@
     <string name="no_empty">Tidak boleh kosong</string>
     <string name="dashboard">Dashboard</string>
     <string name="total_point">Total poin</string>
-    <string name="count_pts">xxxxxpts</string>
+    <string name="count_pts">%1$spts</string>
     <string name="lets_care_environment">Ayo jaga lingkungan</string>
     <string name="otw_eta">ETA : %1$s</string>
     <string name="sold_trash">Sampah terjual</string>
