@@ -9,8 +9,10 @@ import android.view.View
 import androidx.activity.viewModels
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.dicoding.pelitaapps.R
 import com.dicoding.pelitaapps.camera.CameraActivity
 import com.dicoding.pelitaapps.databinding.ActivityDashboardBinding
+import com.dicoding.pelitaapps.localdata.SettingPreference
 import com.dicoding.pelitaapps.profile.ProfileActivity
 import com.dicoding.pelitaapps.sell.SellActivity
 
@@ -59,6 +61,11 @@ class DashboardActivity : AppCompatActivity() {
         }
         dashboardViewModel.listArticles.observe(this){
             setArticles(it)
+        }
+        SettingPreference(this@DashboardActivity).getPrefData("userId")
+            ?.let { dashboardViewModel.getPoint(it.toInt(),"Bearer ".plus(SettingPreference(this@DashboardActivity).getPrefData("token"))) }
+        dashboardViewModel.totalpoint.observe(this){
+            binding.tvCountPoint.text = getString(R.string.count_pts,it.total.toString())
         }
     }
     private fun setArticles(itemsItem: List<ArticleResponseItem>) {

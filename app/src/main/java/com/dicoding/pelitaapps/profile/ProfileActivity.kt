@@ -39,6 +39,7 @@ class ProfileActivity : AppCompatActivity() {
             startActivity(moveIntent)
         }
 
+
         binding.btnEdit.setOnClickListener {
             val moveIntent = Intent(this@ProfileActivity, EditProfileActivity::class.java)
             startActivity(moveIntent)
@@ -65,5 +66,12 @@ class ProfileActivity : AppCompatActivity() {
         val intent = Intent(this, LoginActivity::class.java)
         startActivity(intent)
         finish()
+        
+        binding.btnLogout.setOnClickListener{
+            SettingPreference(this@ProfileActivity).setPrefData("token","")
+            finishAffinity()
+            val moveIntent = Intent(this@ProfileActivity, LoginActivity::class.java)
+            startActivity(moveIntent)
+        }
     }
 }

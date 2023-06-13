@@ -13,6 +13,7 @@ import com.dicoding.pelitaapps.dashboard.DashboardActivity
 import com.dicoding.pelitaapps.data.LoginUser
 import com.dicoding.pelitaapps.remotedata.Result
 import com.dicoding.pelitaapps.databinding.ActivityLoginBinding
+import com.dicoding.pelitaapps.localdata.SettingPreference
 import com.dicoding.pelitaapps.register.RegisterActivity
 import com.dicoding.pelitaapps.viewmodel.MainViewModel
 import com.dicoding.pelitaapps.viewmodel.ViewModelFactory
@@ -79,7 +80,7 @@ class LoginActivity : AppCompatActivity() {
             if (token?.isEmpty() == false) {
                 val mainActivity = Intent(this@LoginActivity, DashboardActivity::class.java)
                 startActivity(mainActivity)
-                finish()
+                finishAffinity()
             }
         }
     }
@@ -97,10 +98,11 @@ class LoginActivity : AppCompatActivity() {
                         Toast.makeText(this@LoginActivity, data.message, Toast.LENGTH_SHORT).show()
                         if (data.token != null) {
                             mainViewModel.setPreference(data.token, this)
+                            SettingPreference(this@LoginActivity).setPrefData("userId",data.id.toString())
                         }
                         val mainActivity = Intent(this@LoginActivity, DashboardActivity::class.java)
                         startActivity(mainActivity)
-                        finish()
+                        finishAffinity()
                     }
                     is Result.Error -> {
                         binding.progressBar.visibility = View.GONE

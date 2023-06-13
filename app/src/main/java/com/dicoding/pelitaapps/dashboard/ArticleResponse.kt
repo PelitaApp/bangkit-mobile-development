@@ -31,3 +31,10 @@ data class ArticleResponseItem(
 	@field:SerializedName("type")
 	val type: String
 )
+
+data class PointResponse(
+
+	@field:SerializedName("total")
+	val total: Int
+)
+
