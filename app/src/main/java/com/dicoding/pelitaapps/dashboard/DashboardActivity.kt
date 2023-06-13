@@ -49,6 +49,11 @@ class DashboardActivity : AppCompatActivity() {
             startActivity(moveIntent)
         }
 
+        binding.btnUser.setOnClickListener {
+            val moveIntent = Intent(this@DashboardActivity, ProfileActivity::class.java)
+            startActivity(moveIntent)
+        }
+
         val layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
         binding.rvArticles.layoutManager = layoutManager
         if (dashboardViewModel.listArticles.value?.size.toString() == "null"){
