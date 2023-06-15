@@ -73,6 +73,9 @@
     <string name="name">Name</string>
     <string name="Name">Name</string>
     <string name="edit_account">Edit Akun</string>
+    <string name="point">Points</string>
+    <string name="tvPencairan">Metode Pencairan</string>
+    <string name="pencairan">C A I R K A N</string>
     <string-array name="jenis_sampah">
         <item>Iron</item>
         <item>Glass</item>

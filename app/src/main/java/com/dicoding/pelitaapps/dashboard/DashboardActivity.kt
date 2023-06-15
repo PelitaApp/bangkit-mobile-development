@@ -13,6 +13,7 @@ import com.dicoding.pelitaapps.R
 import com.dicoding.pelitaapps.camera.CameraActivity
 import com.dicoding.pelitaapps.databinding.ActivityDashboardBinding
 import com.dicoding.pelitaapps.localdata.SettingPreference
+import com.dicoding.pelitaapps.payment.PaymentActivity
 import com.dicoding.pelitaapps.profile.ProfileActivity
 import com.dicoding.pelitaapps.sell.SellActivity
 
@@ -51,6 +52,11 @@ class DashboardActivity : AppCompatActivity() {
 
         binding.btnUser.setOnClickListener {
             val moveIntent = Intent(this@DashboardActivity, ProfileActivity::class.java)
+            startActivity(moveIntent)
+        }
+
+        binding.cvCountPoints.setOnClickListener {
+            val moveIntent = Intent(this@DashboardActivity, PaymentActivity::class.java)
             startActivity(moveIntent)
         }
 

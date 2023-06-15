@@ -18,6 +18,7 @@ import com.dicoding.pelitaapps.viewmodel.ViewModelFactory
 class ProfileActivity : AppCompatActivity() {
     private lateinit var binding: ActivityProfileBinding
     private lateinit var sharedPreferences: SharedPreferences
+    private lateinit var settingPreference: SettingPreference
     private val mainViewModel by viewModels<MainViewModel> {
         ViewModelFactory.getInstance(application)
     }
@@ -26,11 +27,10 @@ class ProfileActivity : AppCompatActivity() {
         binding = ActivityProfileBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        settingPreference = SettingPreference(this)
+
         sharedPreferences = getSharedPreferences("user_pref", Context.MODE_PRIVATE)
-        val userId = sharedPreferences.getString("TOKEN", "")
         val username = binding.usernameProfile.text.toString()
-
-
         binding.usernameProfile.setText(username)
 
 

@@ -1,11 +1,15 @@
 package com.dicoding.pelitaapps.localdata
 
 import android.content.Context
+import com.dicoding.pelitaapps.data.LoginUser
+import com.dicoding.pelitaapps.data.RegisterUser
 
 internal class SettingPreference
     (context: Context) {
         companion object {
             private const val PREFS_NAME = "user_pref"
+            private const val EMAIL = "email"
+            private const val NAME = "name"
             private const val TOKEN = "token"
         }
 
@@ -29,6 +33,13 @@ internal class SettingPreference
         val editor = preferences.edit()
         editor.putString(index, value)
         editor.apply()
+    }
+
+    // Digunakan untuk menampilkan
+    fun setProfile(loginUser: LoginUser) {
+        val prefEditor = preferences.edit()
+        prefEditor.putString(EMAIL, loginUser.email)
+        prefEditor.apply()
     }
 
     fun removeData() {
