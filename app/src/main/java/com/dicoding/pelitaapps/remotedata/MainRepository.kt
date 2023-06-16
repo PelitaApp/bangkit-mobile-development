@@ -3,8 +3,6 @@ package com.dicoding.pelitaapps.remotedata
 import android.content.Context
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.liveData
-import com.dicoding.pelitaapps.data.LoginUser
-import com.dicoding.pelitaapps.data.RegisterUser
 import com.dicoding.pelitaapps.localdata.SettingPreference
 import com.dicoding.pelitaapps.response.LoginResponse
 import com.dicoding.pelitaapps.response.RegisterResponse

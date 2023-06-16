@@ -17,10 +17,10 @@ class ResultActivity : AppCompatActivity() {
         with(binding){
             if(intent.getBooleanExtra(EXTRA_RESULT,true)){
                 ivResult.setImageResource(R.drawable.ic_check)
-                tvResult.text = getString(R.string.success_message)
+                tvResult.text = intent.getStringExtra("resultText")
             }else{
                 ivResult.setImageResource(R.drawable.ic_warning)
-                tvResult.text = getString(R.string.failed_message)
+                tvResult.text = intent.getStringExtra("resultText")
             }
             btnBackHome.setOnClickListener{
                 val moveIntent = Intent(this@ResultActivity, DashboardActivity::class.java)

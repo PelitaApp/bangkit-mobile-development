@@ -18,6 +18,14 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
+        <TextView
+            android:id="@+id/tv_toolbar_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textColor="@color/black"
+            android:text="@string/pelitaa" />
+
         <Button
             android:id="@+id/btn_back"
             android:layout_width="55dp"
@@ -40,42 +48,32 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <ImageView
-                android:id="@+id/ivProfil"
-                android:layout_width="150dp"
-                android:layout_height="150dp"
-                android:layout_marginTop="10dp"
-                android:background="@drawable/ic_person"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
             <TextView
-                android:id="@+id/tv_regisaccount"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:text="@string/profile_edit"
-                android:textAppearance="@style/regis_account"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/ivProfil" />
-
-            <!--    Teks Nama-->
-            <TextView
-                android:id="@+id/namaTextView"
+                android:id="@+id/tv_payment_method"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="30dp"
-                android:layout_marginTop="10dp"
-                android:text="@string/name"
+                android:layout_marginTop="30dp"
+                android:text="@string/payment_method"
+                android:textAppearance="@style/regis_account"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <!--    Teks Nama-->
+            <TextView
+                android:id="@+id/pointsTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="20dp"
+                android:text="@string/points"
                 android:textColor="@color/black"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tv_regisaccount" />
+                app:layout_constraintTop_toBottomOf="@+id/tv_payment_method" />
 
             <!--    nama Email-->
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/namaTextLayout"
+                android:id="@+id/pointsTextLayout"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -84,11 +82,11 @@
                 android:layout_marginEnd="30dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/namaTextView"
-                app:startIconDrawable="@drawable/ic_person">
+                app:layout_constraintTop_toBottomOf="@+id/pointsTextView"
+                app:startIconDrawable="@drawable/ic_money">
 
                 <EditText
-                    android:id="@+id/ed_name"
+                    android:id="@+id/ed_points"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:autofillHints=""
@@ -97,58 +95,20 @@
 
             </com.google.android.material.textfield.TextInputLayout>
 
-
-            <!--Teks Email-->
             <TextView
-                android:id="@+id/emailTextView"
+                android:id="@+id/phoneTextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="30dp"
-                android:layout_marginTop="10dp"
-                android:text="@string/email"
-                android:textColor="@color/black"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/namaTextLayout" />
-
-            <!--    Input Email-->
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/emailTextLayout"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="30dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginEnd="30dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/emailTextView"
-                app:startIconDrawable="@drawable/ic_email">
-
-                <!--        Custom Email-->
-                <com.dicoding.pelitaapps.customview.EditTextEmail
-                    android:id="@+id/ed_email"
-                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:ems="10" />
-
-            </com.google.android.material.textfield.TextInputLayout>
-
-            <!--Teks Password-->
-            <TextView
-                android:id="@+id/passwordTextView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="30dp"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="20dp"
                 android:text="@string/phone"
                 android:textColor="@color/black"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/emailTextLayout" />
+                app:layout_constraintTop_toBottomOf="@+id/pointsTextLayout" />
 
             <!--    Input Password-->
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/passwordTextLayout"
+                android:id="@+id/phoneTextLayout"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -157,7 +117,7 @@
                 android:layout_marginEnd="30dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/passwordTextView"
+                app:layout_constraintTop_toBottomOf="@+id/phoneTextView"
                 app:startIconDrawable="@drawable/ic_phone">
 
                 <EditText
@@ -175,11 +135,11 @@
                 android:id="@+id/btnSimpan"
                 android:layout_width="250dp"
                 android:layout_height="60dp"
-                android:layout_marginTop="10dp"
-                android:text="@string/btnSimpan"
+                android:layout_marginTop="20dp"
+                android:text="@string/process"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/passwordTextLayout" />
+                app:layout_constraintTop_toBottomOf="@+id/phoneTextLayout" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </ScrollView>

@@ -32,21 +32,12 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="pelita" />
-
-        <Button
-            android:id="@+id/user"
-            android:layout_width="55dp"
-            android:layout_height="match_parent"
-            android:layout_gravity="end"
-            android:backgroundTint="@color/white"
-            android:elevation="0dp"
-            android:background="?attr/selectableItemBackgroundBorderless"
-            android:drawableLeft="@drawable/ic_user" />
+            android:text="@string/sell_your_waste" />
 
     </androidx.appcompat.widget.Toolbar>
 
     <ScrollView
+        android:id="@+id/sv_sell"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -57,13 +48,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <androidx.cardview.widget.CardView
+            <com.google.android.material.card.MaterialCardView
                 android:id="@+id/cardView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="30dp"
                 android:layout_marginTop="20dp"
                 app:cardCornerRadius="4dp"
+                app:strokeWidth="2dp"
                 app:cardElevation="0dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent">
@@ -78,7 +70,19 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/toolbar" />
 
-            </androidx.cardview.widget.CardView>
+            </com.google.android.material.card.MaterialCardView>
+
+            <TextView
+                android:id="@+id/tv_warn_take_picture"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/warn_take_picture"
+                android:textColor="@color/red"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cardView" />
 
             <Button
                 android:id="@+id/btn_ambil_gambar"
@@ -90,7 +94,7 @@
                 android:text="@string/take_picture"
                 android:textColor="@color/black"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/cardView" />
+                app:layout_constraintTop_toBottomOf="@+id/tv_warn_take_picture" />
 
             <TextView
                 android:id="@+id/tv_jenis"
@@ -161,13 +165,14 @@
                 app:layout_constraintTop_toBottomOf="@+id/ti_2" />
 
 
-            <androidx.cardview.widget.CardView
+            <com.google.android.material.card.MaterialCardView
                 android:id="@+id/cv_map"
                 android:layout_width="300dp"
                 android:layout_height="150dp"
                 android:layout_marginStart="30dp"
                 app:cardCornerRadius="4dp"
                 app:cardElevation="2dp"
+                app:strokeWidth="2dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/tv_titik_jemput_sampah">
 
@@ -185,7 +190,7 @@
                     android:text="@string/clich_here"
                     android:layout_gravity="center"/>
 
-            </androidx.cardview.widget.CardView>
+            </com.google.android.material.card.MaterialCardView>
 
             <TextView
                 android:id="@+id/tv_alamat"
@@ -248,6 +253,14 @@
 
 
     </ScrollView>
+    <ProgressBar
+        android:id="@+id/pb_sell"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

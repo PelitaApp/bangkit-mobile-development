@@ -1,11 +1,9 @@
 package com.dicoding.pelitaapps.splash
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
-import com.dicoding.pelitaapps.MainActivity
-import com.dicoding.pelitaapps.R
+import androidx.appcompat.app.AppCompatActivity
 import com.dicoding.pelitaapps.databinding.ActivityLandingPageBinding
 import com.dicoding.pelitaapps.localdata.SettingPreference
 import com.dicoding.pelitaapps.login.LoginActivity
@@ -32,7 +30,10 @@ class LandingPageActivity : AppCompatActivity() {
         setContentView(binding.root)
         val currentLanguage: String = resources.configuration.locales[0].toString()
         val currentPrefLanguage: String? = SettingPreference(this@LandingPageActivity).getPrefData("currentLanguage")
-        if (currentPrefLanguage != null) {
+        if(currentPrefLanguage == null){
+            setLanguage("en")
+        }
+        if (currentPrefLanguage != null && currentPrefLanguage.isNotEmpty()) {
             if (currentLanguage.lowercase() != currentPrefLanguage.lowercase()){
                 setLanguage(currentPrefLanguage)
                 recreate()

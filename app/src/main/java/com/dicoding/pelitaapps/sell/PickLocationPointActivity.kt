@@ -1,15 +1,12 @@
 package com.dicoding.pelitaapps.sell
 
-import android.content.ContentValues
 import android.content.Intent
 import android.content.pm.PackageManager
-import android.graphics.Color
 import android.location.Geocoder
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.widget.EditText
 import androidx.activity.result.contract.ActivityResultContracts
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import com.dicoding.pelitaapps.R
 import com.dicoding.pelitaapps.databinding.ActivityPickLocationPointBinding
@@ -18,7 +15,6 @@ import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.GoogleMap
 import com.google.android.gms.maps.OnMapReadyCallback
 import com.google.android.gms.maps.SupportMapFragment
-import com.google.android.gms.maps.model.BitmapDescriptorFactory
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.LatLngBounds
 import com.google.android.gms.maps.model.Marker
@@ -47,7 +43,6 @@ class PickLocationPointActivity : AppCompatActivity(), OnMapReadyCallback {
             resultIntent.putExtra(EXTRA_EXACT_LOC_LAT, locationMarker.position.latitude.toString())
             resultIntent.putExtra(EXTRA_EXACT_LOC_LON, locationMarker.position.longitude.toString())
             setResult(RESULT_CODE,resultIntent)
-            Log.d("ea3","${locationMarker.position.latitude}, ${locationMarker.position.longitude}")
             finish()
         }
 
@@ -124,7 +119,6 @@ class PickLocationPointActivity : AppCompatActivity(), OnMapReadyCallback {
             val list = geocoder.getFromLocation(lat, lon, 1)
             if (list != null && list.size != 0) {
                 addressName = list[0].getAddressLine(0)
-                Log.d(ContentValues.TAG, "getAddressName: $addressName")
             }
         } catch (e: IOException) {
             e.printStackTrace()

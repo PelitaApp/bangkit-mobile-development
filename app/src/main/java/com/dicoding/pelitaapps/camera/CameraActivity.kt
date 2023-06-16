@@ -4,16 +4,19 @@ import android.content.Intent
 import android.content.pm.PackageManager
 import android.graphics.BitmapFactory
 import android.net.Uri
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.provider.MediaStore
-import android.util.Log
+import android.view.View
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
+import androidx.activity.viewModels
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import androidx.core.content.FileProvider
+import com.dicoding.pelitaapps.R
 import com.dicoding.pelitaapps.createCustomTempFile
+import com.dicoding.pelitaapps.dashboard.DashboardViewModel
 import com.dicoding.pelitaapps.databinding.ActivityCameraBinding
 import java.io.File
 
@@ -24,6 +27,7 @@ class CameraActivity : AppCompatActivity() {
     private var namedLoc: String? = ""
     private var exactLocLat: String? = ""
     private var exactLocLon: String? = ""
+    private val dashboardViewModel by viewModels<DashboardViewModel>()
     private val launcherIntentCamera = registerForActivityResult(
         ActivityResultContracts.StartActivityForResult()
     ) {
@@ -33,6 +37,7 @@ class CameraActivity : AppCompatActivity() {
             myFile.let { file ->
                 getFile = file
                 binding.ivCamera.setImageBitmap(BitmapFactory.decodeFile(file.path))
+                dashboardViewModel.postTrashIdentification(getFile!!)
             }
         }else{
             finish()
@@ -44,8 +49,9 @@ class CameraActivity : AppCompatActivity() {
         setContentView(binding.root)
         supportActionBar?.hide()
 
+        binding.pbCamera.visibility = View.GONE
+
         if (!allPermissionsGranted()) {
-            Log.d("perm","not get any")
             ActivityCompat.requestPermissions(
                 this,
                 REQUIRED_PERMISSIONS,
@@ -73,6 +79,27 @@ class CameraActivity : AppCompatActivity() {
             val moveIntent = Intent(this@CameraActivity, CameraActivity::class.java)
             finish()
             startActivity(moveIntent)
+        }
+        dashboardViewModel.isError.observe(this){
+            if(it!=null){
+                Toast.makeText(
+                    this,
+                    it.toString(),
+                    Toast.LENGTH_SHORT
+                ).show()
+            }
+        }
+        dashboardViewModel.isLoading.observe(this){
+            if(it){
+                binding.btnRetake.isEnabled = false
+                binding.pbCamera.visibility = View.VISIBLE
+            }else{
+                binding.btnRetake.isEnabled = true
+                binding.pbCamera.visibility = View.GONE
+            }
+        }
+        dashboardViewModel.postTrashIdentificationRes.observe(this){
+            binding.tvDescription.text = getString(R.string.this_trash_is,it.prediction)
         }
     }
     override fun onRequestPermissionsResult(

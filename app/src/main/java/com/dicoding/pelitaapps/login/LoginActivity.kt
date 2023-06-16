@@ -3,18 +3,17 @@ package com.dicoding.pelitaapps.login
 import android.content.Context
 import android.content.Intent
 import android.os.Build
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
 import androidx.activity.viewModels
-import com.dicoding.pelitaapps.MainActivity
+import androidx.appcompat.app.AppCompatActivity
 import com.dicoding.pelitaapps.dashboard.DashboardActivity
 import com.dicoding.pelitaapps.data.LoginUser
-import com.dicoding.pelitaapps.remotedata.Result
 import com.dicoding.pelitaapps.databinding.ActivityLoginBinding
 import com.dicoding.pelitaapps.localdata.SettingPreference
 import com.dicoding.pelitaapps.register.RegisterActivity
+import com.dicoding.pelitaapps.remotedata.Result
 import com.dicoding.pelitaapps.viewmodel.MainViewModel
 import com.dicoding.pelitaapps.viewmodel.ViewModelFactory
 

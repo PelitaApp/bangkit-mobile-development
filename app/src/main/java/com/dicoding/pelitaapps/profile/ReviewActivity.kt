@@ -1,12 +1,20 @@
 package com.dicoding.pelitaapps.profile
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.dicoding.pelitaapps.R
+import androidx.appcompat.app.AppCompatActivity
+import com.dicoding.pelitaapps.databinding.ActivityReviewBinding
 
 class ReviewActivity : AppCompatActivity() {
+    private lateinit var binding: ActivityReviewBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_review)
+        binding = ActivityReviewBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+        binding.btnSubmit.setOnClickListener{
+            finish()
+        }
+        binding.btnBack.setOnClickListener{
+            finish()
+        }
     }
 }

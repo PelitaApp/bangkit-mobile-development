@@ -34,17 +34,6 @@
             android:layout_gravity="center"
             android:text="pelita" />
 
-        <Button
-            android:id="@+id/btn_user"
-            android:layout_width="55dp"
-            android:layout_height="match_parent"
-            android:layout_gravity="end"
-            android:background="?attr/selectableItemBackgroundBorderless"
-            android:backgroundTint="@color/white"
-            android:drawableEnd="@drawable/ic_user"
-            android:paddingEnd="20dp"
-            android:elevation="0dp" />
-
     </androidx.appcompat.widget.Toolbar>
 
     <ScrollView

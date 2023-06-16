@@ -1,12 +1,8 @@
 package com.dicoding.pelitaapps.profile
 
 import android.content.Intent
-import android.graphics.Color
-import android.graphics.drawable.ColorDrawable
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.window.SplashScreen
-import com.dicoding.pelitaapps.R
+import androidx.appcompat.app.AppCompatActivity
 import com.dicoding.pelitaapps.databinding.ActivityLanguageBinding
 import com.dicoding.pelitaapps.localdata.SettingPreference
 import com.dicoding.pelitaapps.splash.LandingPageActivity
@@ -31,7 +27,6 @@ class LanguageActivity : AppCompatActivity() {
         binding = ActivityLanguageBinding.inflate(layoutInflater)
         setContentView(binding.root)
         val currentLanguage = resources.configuration.locales[0].toString()
-        binding.curlang.text = currentLanguage
         if(currentLanguage=="en_us" || currentLanguage=="en_US"){
             binding.btnEn.isEnabled = false
             binding.btnIn.isEnabled = true
@@ -44,6 +39,9 @@ class LanguageActivity : AppCompatActivity() {
         }
         binding.btnIn.setOnClickListener{
             setLanguage("in")
+        }
+        binding.btnBack.setOnClickListener{
+            finish()
         }
     }
 }

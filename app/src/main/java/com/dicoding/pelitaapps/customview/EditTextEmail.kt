@@ -21,7 +21,6 @@ class EditTextEmail : AppCompatEditText {
     override fun onDraw(canvas: Canvas) {
         super.onDraw(canvas)
         //Menambahkan Hint
-        hint = "Username"
 
         // Menambahkan text aligmnet pada editText
         textAlignment = View.TEXT_ALIGNMENT_VIEW_START

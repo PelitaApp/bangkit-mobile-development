@@ -2,9 +2,7 @@ package com.dicoding.pelitaapps.dashboard
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.LayoutInflater
 import androidx.activity.viewModels
-import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.dicoding.pelitaapps.databinding.ActivityArticleBinding
 
