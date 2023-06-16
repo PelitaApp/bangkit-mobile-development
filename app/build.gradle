@@ -81,6 +81,10 @@ dependencies {
     implementation 'com.google.maps:google-maps-services:2.2.0'
     implementation 'com.google.maps.android:android-maps-utils:3.4.0'
 
+    //Data Store
+    implementation "androidx.datastore:datastore-preferences:1.0.0"
+    implementation "androidx.lifecycle:lifecycle-livedata-ktx:2.6.1"
+
 
 
 
