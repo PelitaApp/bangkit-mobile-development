@@ -48,11 +48,6 @@ class DashboardActivity : AppCompatActivity() {
             startActivity(moveIntent)
         }
 
-        binding.btnUser.setOnClickListener {
-            val moveIntent = Intent(this@DashboardActivity, ProfileActivity::class.java)
-            startActivity(moveIntent)
-        }
-
         binding.cvCountPoints.setOnClickListener {
             val moveIntent = Intent(this@DashboardActivity, PaymentActivity::class.java)
             startActivity(moveIntent)
